@@ -1,0 +1,68 @@
+{
+  "name": "safestats",
+  "version": "1.0.0",
+  "description": "A lightweight, isomorphic analytics library that collects anonymous metrics without compromising user privacy. Works in Node.js and the browser.",
+  
+  
+  "main": "dist/index.js",
+  
+  "types": "dist/index.d.ts",
+  
+  "type": "module",
+  
+ 
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prepublishOnly": "npm run build"
+  },
+  
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Imran-Ashiq/safestats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Imran-Ashiq/safestats/issues"
+  },
+  "homepage": "https://github.com/Imran-Ashiq/safestats#readme",
+
+
+  "keywords": [
+    "analytics",
+    "privacy",
+    "gdpr",
+    "ccpa",
+    "anonymous",
+    "tracking",
+    "metrics",
+    "isomorphic",
+    "universal",
+    "browser",
+    "nodejs"
+  ],
+  
+
+  "author": "Muhammad Imran <imranbwpk@gmail.com>",
+  "license": "MIT",
+
+  "files": [
+    "dist"
+  ],
+  
+
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.2",
+    "eslint": "^9.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.3.2",
+    "ts-jest": "^29.1.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.1"
+  }
+}
