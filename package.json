@@ -1,6 +1,6 @@
 {
   "name": "safestats",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A lightweight, isomorphic analytics library that collects anonymous metrics without compromising user privacy. Works in Node.js and the browser.",
   
   
