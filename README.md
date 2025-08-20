@@ -32,6 +32,8 @@ We designed SafeStats around four core principles to create a tool you can trust
 | ⏱️ **Effortless Performance** | Go beyond usage stats. With our simple `startTimer` and `endTimer` API, you can easily measure the performance of critical code paths.               |
 | 🧠 **Intelligent Context**  | Every event is automatically and safely enriched with environment context (like OS or Node version), helping you debug issues with zero extra configuration. |
 
+
+
 ## Getting Started in 60 Seconds
 
 It's incredibly easy to integrate SafeStats into your project.
@@ -89,6 +91,37 @@ We believe in full transparency. Here is an example of the clean, privacy-safe J
     "arch": "arm64"
   }
 }
+```
+
+## Use as a GitHub Action
+
+SafeStats can be used directly in your CI/CD workflows to track events like successful deployments, test failures, or build completions.
+
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy and Track
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # ... your deployment steps here ...
+
+      - name: Track Successful Deployment with SafeStats
+        uses: YOUR_USERNAME/safestats@v1 # Use your GitHub username and repo name
+        with:
+          endpoint-url: ${{ secrets.ANALYTICS_ENDPOINT }}
+          event-name: 'deployment_success'
+          context: '{"sessionId": "${{ github.run_id }}"}' # Anonymize the unique workflow run ID
+          payload: '{"commit": "${{ github.sha }}"}'
 ```
 
 ## Join the Mission

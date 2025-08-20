@@ -1,0 +1,29 @@
+# action.yml
+name: 'SafeStats Event Tracker'
+description: 'Tracks an anonymous, privacy-safe event using SafeStats.'
+author: 'Muhammad Imran'
+
+# Define the inputs the user will provide in their workflow
+inputs:
+  endpoint-url:
+    description: 'The URL of your analytics endpoint.'
+    required: true
+  event-name:
+    description: 'The name of the event to track (e.g., "deployment_success").'
+    required: true
+  context:
+    description: 'A JSON string representing the user context (e.g., `{"sessionId": "some-id"}`). Will be anonymized.'
+    required: true
+  payload:
+    description: 'An optional JSON string for additional non-sensitive data.'
+    required: false
+    default: '{}'
+
+# Define how the action runs
+runs:
+  using: 'node20'
+  main: 'action/index.js' 
+
+branding:
+  icon: 'shield'
+  color: 'green'
