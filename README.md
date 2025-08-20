@@ -116,7 +116,7 @@ jobs:
       # ... your deployment steps here ...
 
       - name: Track Successful Deployment with SafeStats
-        uses: YOUR_USERNAME/safestats@v1 # Use your GitHub username and repo name
+        uses: Imran-Ashiq/safestats@v1 
         with:
           endpoint-url: ${{ secrets.ANALYTICS_ENDPOINT }}
           event-name: 'deployment_success'
