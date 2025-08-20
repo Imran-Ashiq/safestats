@@ -1,21 +1,19 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "target": "ES2020",                       // Compile to a modern ECMAScript version
-    "module": "commonjs",                     // Use the standard module system for Node.js
-    "outDir": "./dist",                       // Where to output the compiled JavaScript
-    "rootDir": "./src",                       // The root directory of our source files
+    /* Build Options */
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
 
-    /* Strict Type-Checking Options */
-    "strict": true,                           // Enable all strict type-checking options
-    "esModuleInterop": true,                  // Enables compatibility with CommonJS modules
-    "skipLibCheck": true,                     // Skip type checking of declaration files
-    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references
-
-    /* Declaration Files */
-    "declaration": true,                      // Generate corresponding '.d.ts' file for type definitions
-    "declarationDir": "./dist/types"          // Output directory for declaration files
+    /* Strictness */
+    "strict": true,
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"],                    // Specifies which files to include in compilation
-  "exclude": ["node_modules", "dist", "test"] // Specifies which files to exclude
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test"]
 }
